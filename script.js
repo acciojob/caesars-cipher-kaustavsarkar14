@@ -34,6 +34,7 @@ const lookup = {
 function rot13(encodedStr) {
  let decodedArr = []; 
 	for (let i = 0; i < encodedStr.length; i++) {
+	if(encodedStr.charAt(i)===' ') decodedArr.push(' ')
     decodedArr.push(lookup[encodedStr.charAt(i)])
   }
   return decodedArr.join(""); 
